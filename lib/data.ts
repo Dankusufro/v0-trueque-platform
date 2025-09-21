@@ -1,0 +1,86 @@
+import type { User, Item, Category } from "./types"
+
+// Mock data para demostración
+export const mockUsers: User[] = [
+  {
+    id: "1",
+    name: "María González",
+    email: "maria@example.com",
+    avatar: "/woman-avatar.png",
+    location: "Ciudad de México",
+    rating: 4.8,
+    totalTrades: 23,
+    joinedAt: new Date("2023-01-15"),
+    bio: "Amante del intercambio sostenible y la economía circular.",
+  },
+  {
+    id: "2",
+    name: "Carlos Ruiz",
+    email: "carlos@example.com",
+    avatar: "/man-avatar.png",
+    location: "Guadalajara",
+    rating: 4.6,
+    totalTrades: 18,
+    joinedAt: new Date("2023-03-20"),
+    bio: "Coleccionista de libros y artículos vintage.",
+  },
+]
+
+export const mockCategories: Category[] = [
+  { id: "1", name: "Electrónicos", icon: "📱", description: "Dispositivos y gadgets tecnológicos" },
+  { id: "2", name: "Libros", icon: "📚", description: "Literatura, educación y entretenimiento" },
+  { id: "3", name: "Ropa", icon: "👕", description: "Vestimenta y accesorios" },
+  { id: "4", name: "Hogar", icon: "🏠", description: "Artículos para el hogar y decoración" },
+  { id: "5", name: "Deportes", icon: "⚽", description: "Equipamiento deportivo y fitness" },
+  { id: "6", name: "Arte", icon: "🎨", description: "Obras de arte y manualidades" },
+  { id: "7", name: "Música", icon: "🎵", description: "Instrumentos y equipos musicales" },
+  { id: "8", name: "Servicios", icon: "🔧", description: "Servicios profesionales y habilidades" },
+]
+
+export const mockItems: Item[] = [
+  {
+    id: "1",
+    title: "iPhone 12 Pro",
+    description: "iPhone 12 Pro en excelente estado, con cargador original y funda protectora.",
+    category: "Electrónicos",
+    condition: "bueno",
+    images: ["/iphone-12-pro.jpg"],
+    estimatedValue: 15000,
+    userId: "1",
+    user: mockUsers[0],
+    location: "Ciudad de México",
+    isAvailable: true,
+    createdAt: new Date("2024-01-10"),
+    tags: ["smartphone", "apple", "tecnología"],
+  },
+  {
+    id: "2",
+    title: "Colección de libros de programación",
+    description: "Set de 5 libros sobre desarrollo web y JavaScript. Perfectos para aprender.",
+    category: "Libros",
+    condition: "como-nuevo",
+    images: ["/programming-books.jpg"],
+    estimatedValue: 2500,
+    userId: "2",
+    user: mockUsers[1],
+    location: "Guadalajara",
+    isAvailable: true,
+    createdAt: new Date("2024-01-08"),
+    tags: ["programación", "javascript", "educación"],
+  },
+  {
+    id: "3",
+    title: "Bicicleta de montaña",
+    description: "Bicicleta Trek en buen estado, ideal para aventuras en la montaña.",
+    category: "Deportes",
+    condition: "bueno",
+    images: ["/mountain-bike.jpg"],
+    estimatedValue: 8000,
+    userId: "1",
+    user: mockUsers[0],
+    location: "Ciudad de México",
+    isAvailable: true,
+    createdAt: new Date("2024-01-05"),
+    tags: ["bicicleta", "deportes", "montaña"],
+  },
+]
